@@ -55,7 +55,7 @@ class _GridViewOrnekState extends State<GridViewOrnek> {
           onTap: () => debugPrint("Merhaba Flutter $index tıklanıldı"),
           onDoubleTap: () =>
               debugPrint("Merhaba Flutter $index çift tıklanıldı"),
-          onLongPress: () => debugPrint("Merhaba Flutter $index uzun basıldı"),
+          onLongPress: () => debugPrint("Merhaba Flutter $index uzun basildı"),
           onHorizontalDragStart: (e) =>
               debugPrint("Merhaba Flutter $index uzun basıldı $e"),
         );
