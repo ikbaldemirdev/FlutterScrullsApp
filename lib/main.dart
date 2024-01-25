@@ -1,37 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_scrulls_app/grid_view_kullanimi.dart';
+import 'package:flutter_scrulls_app/custom_scroll_ve_slivers.dart';
 
 void main() {
-  runApp(MyApp());
-  configLoading();
-}
-
-void configLoading() {
-  EasyLoading.instance
-    ..displayDuration = const Duration(milliseconds: 2000)
-    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
-    ..loadingStyle = EasyLoadingStyle.custom
-    ..indicatorSize = 45.0
-    ..radius = 10.0
-    ..progressColor = Colors.yellow
-    ..backgroundColor = Colors.green
-    ..indicatorColor = Colors.yellow
-    ..textColor = Colors.white
-    ..maskColor = Colors.blue.withOpacity(0.5)
-    ..userInteractions = true
-    ..dismissOnTap = false;
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: GridViewOrnek(),
-      builder: EasyLoading.init(),
-    );
-  }
+  runApp(MaterialApp(
+    title: "Flutter Dersleri",
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      primarySwatch: Colors.orange,
+      // brightness: Brightness.dark, // birghtness tüm yapıyı etkilediği için them datanın içerisinde kullanmamız gerekiyor. Gece modu olarak aklında kalsın.
+    ),
+    home: Scaffold(
+      body: CollapsableToolbarOrnek(),
+    ),
+  ));
 }
